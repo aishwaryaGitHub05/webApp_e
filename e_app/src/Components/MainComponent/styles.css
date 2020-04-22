@@ -1,0 +1,17 @@
+.cartContainer {
+    margin-right: 20px;
+}
+
+.cartContainer:last-child {
+    margin-right: 0;
+}
+
+.flexWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartContainer img {
+    width: 300px;
+}

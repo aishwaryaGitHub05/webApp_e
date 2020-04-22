@@ -1,0 +1,31 @@
+.Wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    padding: 0 150px;
+}
+
+.Header {
+    display: flex;
+}
+
+.Header span {
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.Header span:last-child, .loginFlex span:last-child {
+    padding-right: 0;
+}
+
+.loginFlex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.loginFlex span {
+    padding-right: 20px;
+    cursor: pointer;
+}
