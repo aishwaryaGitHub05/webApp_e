@@ -1,40 +1,32 @@
 import React from 'react';
 import './styles.css';
+import About from "../Pages/About";
+import HomePage from "../Pages/homePage";
+import Login from "../Pages/Login";
+// import {Switch, Route} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Shop from "../Pages";
 
-import image1 from '../../image/img1.jpg';
-import image2 from '../../image/img2.jpg';
-import image3 from '../../image/img3.jpg';
 
 
 class MainComponent extends React.Component {
     render() {
         return (
-            <div className="flexWrapper">
-                <div className="cartContainer">
-                    <img src={image1} />
-                    <div>
-                        <h3>Rs. 600</h3>
-                        <span>Add to Cart</span>
-                    </div>
-                </div>
-                <div className="cartContainer">
-                    <img src={image2} />
-                    <div>
-                        <h3>Rs. 1200</h3>
-                        <span>Add to Cart</span>
-                    </div>
-                </div>
-                <div className="cartContainer">
-                    <img src={image3} />
-                    <div>
-                        <h3>Rs. 800</h3>
-                        <span>Add to Cart</span>
-                    </div>
-                </div>
-
-            </div>
+            <Switch>
+                <Route path={"/home"}>
+                    <HomePage/>
+                </Route>
+                <Route path="/shop">
+                    <Shop/>
+                </Route>
+                <Route path="/about">
+                    <About/>
+                </Route>
+                <Route path="/login">
+                    <Login />
+                </Route>
+            </Switch>
             )
-
     }
 }
 

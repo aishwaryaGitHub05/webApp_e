@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles.css';
+import { Link } from "react-router-dom";
+import Login from "../Pages/Login";
 
 class HeaderComponent extends React.Component {
     render() {
@@ -8,13 +10,14 @@ class HeaderComponent extends React.Component {
                 <div className="Wrapper">
                     <div>LOGO</div>
                     <div className="Header">
-                        <span>Shop</span>
-                        <span>About</span>
+                        <span><Link to="/home">Home</Link></span>
+                        <span><Link to="/shop">Shop</Link></span>
+                        <span><Link to="/about">About</Link></span>
                         <span>Journal</span>
                         <span>Contact</span>
                     </div>
                     <div className="loginFlex">
-                        <span>Login</span>
+                        <span><Link to='/login'>Login</Link></span>
                         <span>Cart</span>
                     </div>
                 </div>
